@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.pyc
+
+# Databricks
+.ipynb_checkpoints/
+
+# Data Files
+*.csv
+*.parquet
+
+# Delta Files
+*.crc
+
+# Secrets
+.env
