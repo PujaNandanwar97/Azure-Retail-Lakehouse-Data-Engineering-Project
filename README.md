@@ -1,94 +1,160 @@
-🚀 Azure Retail Lakehouse Data Engineering Project
+# 🚀 Azure Retail Lakehouse Project using Azure Databricks & Azure Data Factory
 
-📖 Project Overview
 
-This project demonstrates an end-to-end Azure Lakehouse Data Engineering solution built using Azure Data Lake Storage Gen2, Azure Databricks, PySpark, Delta Lake, SQL, and Unity Catalog.
+# 📌 Project Overview
 
-The project follows the Medallion Architecture (Bronze → Silver → Gold) to transform raw retail data into analytics-ready datasets.
+This project demonstrates an end-to-end Azure Lakehouse implementation using the Medallion Architecture (Bronze, Silver, Gold).
 
-The implementation covers the complete ETL lifecycle—from raw data ingestion and cleansing to dimensional modeling and fact table creation—using cloud-native Azure technologies.
+The solution ingests raw retail data into Azure Data Lake Storage using Azure Data Factory, transforms it using Azure Databricks and Delta Lake, and builds curated analytical datasets for reporting and analytics.
 
----
-
-🎯 Business Problem
-
-Retail companies generate large volumes of transactional data from customers, orders, products, sellers, payments, and reviews.
-
-Raw operational datasets are not suitable for analytics because they contain inconsistencies, duplicates, and normalized transactional structures.
-
-The objective of this project is to build a scalable Azure Lakehouse pipeline that transforms raw data into business-ready analytical datasets for reporting and decision-making.
+The project follows real-world Data Engineering practices including data ingestion, cleansing, transformation, Delta Lake implementation, Unity Catalog, and dimensional modeling.
 
 ---
 
-🏗️ Solution Architecture
+# 🏗 Architecture
 
-«Architecture Diagram»
-
-(Replace the image below with your own architecture diagram after uploading it to the repository.)
-
-                    Brazilian Olist Dataset
-                             │
-                             ▼
-          Azure Data Lake Storage Gen2 (Bronze)
-                             │
-                             ▼
-                  Azure Databricks (PySpark)
-                             │
-                             ▼
-                  Silver Layer (Clean Data)
-                             │
-                             ▼
-               Gold Layer (Fact & Dimensions)
-                             │
-                             ▼
-                  Analytics Ready Data
-
----
-
-🥉 Bronze Layer
-
-Purpose
-
-Store raw source data exactly as received.
-
-Activities
-
-- Raw CSV ingestion
-- Schema inference
-- Delta conversion
-- Historical preservation
-
-Output
-
-Raw Delta Tables
+```
+Retail Dataset
+      │
+      ▼
+Azure Data Factory
+(Ingestion Pipeline)
+      │
+      ▼
+Azure Data Lake Storage Gen2
+Bronze Layer
+(Raw CSV Files)
+      │
+      ▼
+Azure Databricks
+Bronze Notebook
+      │
+      ▼
+Silver Layer
+(Cleaned Delta Tables)
+      │
+      ▼
+Gold Layer
+(Dimension & Fact Tables)
+      │
+      ▼
+Analytics Ready Data
+```
 
 ---
 
-🥈 Silver Layer
+# 🛠 Technologies Used
 
-Purpose
+- Microsoft Azure
+- Azure Data Factory
+- Azure Data Lake Storage Gen2
+- Azure Databricks
+- Apache Spark
+- PySpark
+- Delta Lake
+- Unity Catalog
+- SQL
+- Medallion Architecture
 
-Transform raw data into clean, validated, and standardized datasets.
+---
 
-Activities
+# 📂 Project Structure
+
+```
+Azure-Retail-Lakehouse-Project
+
+│
+├── Dataset/
+│
+├── Notebooks/
+│ ├── 01_Bronze_Data_Ingestion.ipynb
+│ ├── 02_Silver_Layer.ipynb
+│ └── 03_Gold_Layer.ipynb
+│
+├── Architecture Diagram
+│
+├── requirements.txt
+│
+├── .gitignore
+│
+└── README.md
+```
+
+---
+
+# 📊 Dataset
+
+Dataset Used
+
+Brazilian E-Commerce Public Dataset by Olist
+
+Tables Used
+
+- customers
+- orders
+- order_items
+- products
+- sellers
+- payments
+- reviews
+
+---
+
+# ⚙ Project Workflow
+
+## Step 1
+
+Azure Data Factory Pipeline created
+
+✔ Linked Service
+
+✔ Dataset
+
+✔ Copy Activity
+
+✔ Trigger
+
+✔ Pipeline Publish
+
+---
+
+## Step 2
+
+Raw CSV files landed into Bronze Layer
+
+Stored inside Azure Data Lake Storage Gen2.
+
+---
+
+## Step 3
+
+Azure Databricks Bronze Notebook
+
+- Read CSV
+- Validate Schema
+- Load Data
+
+---
+
+## Step 4
+
+Silver Layer
+
+Performed
 
 - Data Cleaning
 - Null Handling
+- Data Type Conversion
 - Duplicate Removal
-- Schema Standardization
-- Business Transformations
-
-Output
-
-Clean Delta Tables
+- Delta Table Creation
 
 ---
 
-🥇 Gold Layer
+## Step 5
 
-Purpose
+Gold Layer
 
-Build business-ready analytical tables optimized for reporting and analytics.
+Created Analytical Tables
 
 Dimension Tables
 
@@ -102,185 +168,85 @@ Fact Table
 
 ---
 
-⚙️ Azure Services Used
-
-- Azure Data Lake Storage Gen2
-- Azure Databricks
-- Unity Catalog
-
----
-
-💻 Technologies Used
-
-- Python
-- PySpark
-- Apache Spark
-- SQL
-- Delta Lake
-- Git
-- GitHub
-
----
-
-📂 Repository Structure
-
-Azure-Retail-Lakehouse-Data-Engineering-Project
-│
-├── notebooks
-│ ├── 01_Bronze_Data_Ingestion
-│ ├── 02_Silver_Layer
-│ ├── 03_Gold_Layer
-│ └── 04_Delta_Lake_Advanced_Features
-│
-├── architecture
-│ └── architecture.png
-│
-├── dataset
-│ └── README.md
-│
-├── requirements.txt
-├── .gitignore
-└── README.md
-
----
-
-🔄 Data Flow
-
-CSV Files
-
-↓
-
-Azure Data Lake Storage Gen2
-
-↓
+# 🗄 Medallion Architecture
 
 Bronze Layer
+
+Raw Data
 
 ↓
 
 Silver Layer
 
+Cleaned Delta Tables
+
 ↓
 
 Gold Layer
 
-↓
-
-Business Ready Delta Tables
+Business Ready Analytical Tables
 
 ---
 
-📊 Gold Layer Tables
+# 🚀 Features
 
-Table| Description
-Dim Customers| Customer Dimension
-Dim Products| Product Dimension
-Dim Sellers| Seller Dimension
-Fact Sales| Sales Fact Table
+✔ Azure Data Factory Pipeline
+
+✔ Automated Data Ingestion
+
+✔ Azure Data Lake Storage
+
+✔ Delta Lake Tables
+
+✔ Unity Catalog
+
+✔ Medallion Architecture
+
+✔ PySpark Transformations
+
+✔ SQL Queries
+
+✔ Dimension Modeling
+
+✔ Fact Table Creation
 
 ---
 
-🚀 Key Features
+# 📈 Skills Demonstrated
 
-- End-to-End Azure Lakehouse
-- Medallion Architecture
-- Delta Lake Storage
+- Azure Data Factory
 - Azure Databricks
-- Unity Catalog
-- PySpark Transformations
-- Data Cleaning Pipeline
-- Star Schema Design
-- Fact & Dimension Modeling
-- Cloud Data Engineering
-
----
-
-📚 Dataset
-
-Dataset: Brazilian E-Commerce Public Dataset by Olist
-
-Source:
-
-https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce
-
----
-
-🚧 Challenges Solved
-
-During the development of this project, several practical cloud engineering challenges were solved:
-
-- Configuring Azure Data Lake Storage Gen2 with Databricks
-- Working with Delta Lake tables
-- Managing Unity Catalog tables
-- Building Bronze, Silver, and Gold layers
-- Implementing dimensional modeling
-- Resolving storage authentication issues
-- Validating Delta outputs
-- Handling managed vs external storage behavior
-
----
-
-🎓 Skills Demonstrated
-
-- Azure Data Engineering
-- ETL Development
+- Azure Storage
 - PySpark
-- Apache Spark
+- SQL
 - Delta Lake
-- Data Cleaning
-- Data Transformation
+- Data Engineering
+- ETL Pipeline
 - Data Modeling
-- Star Schema
-- Cloud Storage
-- Git Version Control
+- Lakehouse Architecture
 
 ---
 
-📖 Key Learnings
+# 📌 Future Improvements
 
-This project helped strengthen practical knowledge in:
-
-- Azure Lakehouse Architecture
-- Medallion Architecture
-- Delta Lake
-- Unity Catalog
-- ETL Pipeline Development
-- PySpark Data Processing
-- Azure Storage Integration
-- Cloud Data Engineering Best Practices
+- Incremental Load
+- Change Data Capture (CDC)
+- Delta Merge
+- Synapse Analytics Integration
+- Power BI Dashboard
 
 ---
 
-▶️ How to Run
+# 👩 Author
 
-1. Upload the Olist dataset to Azure Data Lake Storage Gen2.
-2. Run the Bronze notebook.
-3. Run the Silver notebook.
-4. Run the Gold notebook.
-5. Validate Delta tables.
-6. Query Gold tables using Unity Catalog.
-
----
-
-🚀 Future Enhancements
-
-- Incremental Data Loading
-- Azure Data Factory Pipeline
-- Azure Synapse Analytics
-- CI/CD Pipeline
-- Data Quality Monitoring
-- Automated Pipeline Scheduling
-
----
-
-👩‍💻 Author
-
-Pooja Nandanwar
+**Pooja Nandanwar**
 
 Aspiring Data Engineer
 
-Passionate about Azure Data Engineering, PySpark, Delta Lake, ETL Pipelines, and Cloud Analytics.
+Focused on
+
+Azure • Databricks • PySpark • SQL • Delta Lake • Data Engineering
 
 ---
 
-⭐ If you found this project useful, please consider giving it a Star!
+⭐ If you found this project useful, don't forget to Star this repository.
