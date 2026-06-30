@@ -1,16 +1,5 @@
 🚀 Azure Retail Lakehouse Data Engineering Project
 
-<p align="center">"Azure" (https://img.shields.io/badge/Azure-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white)
-"Databricks" (https://img.shields.io/badge/Databricks-EA4335?style=for-the-badge&logo=databricks&logoColor=white)
-"PySpark" (https://img.shields.io/badge/PySpark-FDEE21?style=for-the-badge&logo=apachespark&logoColor=black)
-"Apache Spark" (https://img.shields.io/badge/Apache%20Spark-E25A1C?style=for-the-badge&logo=apachespark&logoColor=white)
-"Delta Lake" (https://img.shields.io/badge/Delta%20Lake-00A3E0?style=for-the-badge)
-"Python" (https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-"SQL" (https://img.shields.io/badge/SQL-336791?style=for-the-badge)
-"Git" (https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-
-</p>---
-
 📖 Project Overview
 
 This project demonstrates an end-to-end Azure Lakehouse Data Engineering solution built using Azure Data Lake Storage Gen2, Azure Databricks, PySpark, Delta Lake, SQL, and Unity Catalog.
